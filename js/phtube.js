@@ -24,11 +24,20 @@ const handleMyPhTubeElements = async (phtubeCategoryId) => {
     data.data?.forEach((phtubeElements) => {
         // console.log(phtubeElements.authors[0].verified);
         const verificationBadge = phtubeElements.authors[0].verified;
+
+        console.log(phtubeElements.others.posted_date);
+        let postDateSeconds = phtubeElements.others.posted_date;
+        let postDateHours = Math.floor(postDateSeconds / 3600);
+        let postDateMinutes = Math.floor((postDateSeconds % 3600) / 60);
+        let timeInHoursMinutes = `${postDateHours > 0 ? postDateHours + ' ' + 'hrs' : ''} ${postDateMinutes > 0 ? postDateMinutes + ' ' + 'min' + ' ' + 'ago' : ''}`;
+        // console.log(timeInHoursMinutes);
+
+
         const div = document.createElement('div');
         div.innerHTML = `
         <div class="card w-72 h-96 bg-base-100 shadow-xl">
             <figure><img src=${phtubeElements?.thumbnail} alt="thumbnail-image" /></figure>
-            <p class="text-right -my-2">Time</p>
+            <p class="text-right -my-6 bg-[#171717] text-white p-2">${timeInHoursMinutes}</p>
             <div class="card-body">
 
                 <div class="flex flex-row">
