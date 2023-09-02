@@ -27,7 +27,8 @@
                 </div>
             </div>
             <div class="navbar-center">
-                <button class="bg-[#25252533] p-2 text-lg font-medium rounded">Sort by view</button>
+                <button onclick="handlePhtubeSortByViews('1000')" id="sort-descending-order" class="bg-[#25252533] p-2 text-lg font-medium rounded">Sort by
+                    view</button>
             </div>
             <div class="navbar-end">
                 <button class="bg-[#FF1F3D] text-white px-4 py-2 text-lg font-medium rounded-lg"> <a
@@ -45,21 +46,23 @@
         <!-- tab starts  -->
         <div class="w-full mt-8">
             <div class="tabs justify-center" id="myphtube-tab-container">
-                
+
             </div>
         </div>
         <!-- tab ends -->
 
         <!-- card starts  -->
         <div id="myphtube-card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
-            
+
         </div>
         <!-- card ends -->
 
+        <!-- no content found section starts  -->
         <div id="no-content-container" class="hidden">
             <img class="mx-auto" src="images/Icon.png" alt="no-content-image">
             <h1 class="text-center text-2xl font-bold">Oops!! Sorry, There is no <br> content here</h1>
         </div>
+        <!-- no content found section ends  -->
 
     </main>
     <!-- main section ends here  -->
