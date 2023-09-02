@@ -31,7 +31,7 @@ document.getElementById('question-2-more').addEventListener('click', () => {
     const div = document.createElement('div');
     div.innerHTML = `
     
-    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+    <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
       <form method="dialog" class="modal-box">
         <h3 class="font-bold text-lg">More ...</h3>
         <p class="py-4">null indicates a variable or object property is empty. It is used to reset or clear a variable.</p>
@@ -43,7 +43,7 @@ document.getElementById('question-2-more').addEventListener('click', () => {
     
     `;
     moreContent2.appendChild(div);
-    const modal = document.getElementById('my_modal_5');
+    const modal = document.getElementById('my_modal_6');
     modal.showModal();
 
 })
@@ -56,7 +56,7 @@ document.getElementById('question-3-more').addEventListener('click', () => {
     const div = document.createElement('div');
     div.innerHTML = `
     
-    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+    <dialog id="my_modal_7" class="modal modal-bottom sm:modal-middle">
       <form method="dialog" class="modal-box">
         <h3 class="font-bold text-lg">More ...</h3>
         <p class="py-4">For CRUD (create, read, update, and delete) activities, the REST API uses conventional HTTP methods. The most commonly used HTTP methods in the REST API are GET (retrieve data), POST (create data), PUT (update data), and DELETE (remove data).</p>
@@ -68,7 +68,7 @@ document.getElementById('question-3-more').addEventListener('click', () => {
     
     `;
     moreContent3.appendChild(div);
-    const modal = document.getElementById('my_modal_5');
+    const modal = document.getElementById('my_modal_7');
     modal.showModal();
 
 })
