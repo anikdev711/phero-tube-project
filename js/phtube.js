@@ -1,4 +1,6 @@
 
+//categories
+
 const handleMyPhTubeCategories = async () => {
     const response = await fetch('https://openapi.programming-hero.com/api/videos/categories');
     const data = await response.json();
@@ -10,11 +12,13 @@ const handleMyPhTubeCategories = async () => {
 
         const div = document.createElement('div');
         div.innerHTML = `
-            <a onclick="handleMyPhTubeElements('${phtubeCategory.category_id}')" class="tab tab-active">${phtubeCategory.category}</a>
+            <a onclick="handleMyPhTubeElements('${phtubeCategory.category_id}')" class="tab tab-active hover:bg-lime-200 font-semibold">${phtubeCategory.category}</a>
         `;
         myPhtubeTabContainer.appendChild(div);
     })
 };
+
+//Category Id
 
 const handleMyPhTubeElements = async (phtubeCategoryId) => {
 
@@ -80,6 +84,8 @@ const handleMyPhTubeElements = async (phtubeCategoryId) => {
 
 }
 
+//Sort by view 
+
 const handlePhtubeSortByViews = async (phtubeCategoryId) => {
 
     // console.log(phtubeCategoryId);
@@ -87,7 +93,7 @@ const handlePhtubeSortByViews = async (phtubeCategoryId) => {
     const response = await fetch(`https://openapi.programming-hero.com/api/videos/category/${phtubeCategoryId}`);
     const data = await response.json();
 
-    
+
 
     const sortByViewsOfPhtube = data.data;
     // console.log(sortByViewsOfPhtube);
@@ -95,8 +101,8 @@ const handlePhtubeSortByViews = async (phtubeCategoryId) => {
         const viewsA = parseFloat(a.others.views)
         const viewsB = parseFloat(b.others.views)
         return viewsB - viewsA;
-    })
-    
+    });
+    // console.log(sortByViewsOfPhtube);
 
 
     const myPhtubeCardContainer = document.getElementById('myphtube-card-container');
